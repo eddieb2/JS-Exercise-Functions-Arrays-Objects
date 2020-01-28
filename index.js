@@ -157,7 +157,7 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-
+/////////////////////////////// CORRECT ////////////////////////
 function getCarInfoByIndex(inventory, index) { 
   return `This is a ${inventory[index].car_make} ${inventory[index].car_model}.`
 }
@@ -275,7 +275,7 @@ function getModelYears(inventory) {
  * in the same order as they appear in the original inventory.
 */
 
-/////////////////////////////// CORRECT //////////////////////////////////
+/////////////////////////////// CORRECT ///////////////////////////////////////////UNDERSTOOD///////////////////
 function getOlderCars(inventory, maxYear) {
   let olderCarsArr = [];
   for (let i = 0; i < inventory.length; i++) {
@@ -299,7 +299,7 @@ function getOlderCars(inventory, maxYear) {
  * in the same order as they appear in the original inventory.
 */
 
-///////////////////////////// CORRECT //////////////////////////////
+///////////////////////////// CORRECT /////////////////////////////////////////////UNDERSTOOD///////////////////
 function getGermanCars(inventory) {
   let germanCarsArr = [];
   for (let i = 0; i < inventory.length; i++) {
@@ -337,6 +337,7 @@ function getGermanCars(inventory) {
 */
 
 /////////////// CORRECT //////////////////
+///////////////////UNDERSTOOD///////////////////
 const sum = (a, b) => {
   return a + b;
 }; 
@@ -360,8 +361,14 @@ const argTimesTwo = num => {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
+function carMaker(num) {
+  let createdCar = {
+    odometer: num,
+    drive: function(distance){
+      return this.odometer += distance;
+    }
+  }
+  return createdCar;
 }
 
 /// ////// END OF CHALLENGE /////////
